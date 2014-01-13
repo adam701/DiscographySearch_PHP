@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+<script>
+function check(){
+	
+	if(/^\s*$/.test(document.forms[0].inputText.value)){
+		alert("Please enter something in the search box!");
+	}
+	else{
+	     document.forms[0].submit();
+	}
+}
+</script>
+
+
+<style type="text/css">
+div{margin-top:100px;text-align:center;}
+</style>
+</head>
+
+
+<body>
+<div>
+<h1>
+Discography Search
+</h1>
+<table border=0px align="center" >
+<form  action="http://cs-server.usc.edu:31259/cgi-bin/get_discography.php" target="_blank">
+<tr><td><b>Search</b></td><td width=20px>  </td><td> <input type="text"  name="inputText" method="GET" size=50px><br></td></tr>
+<tr><td><b>Type</b></td><td width=20px></td><td style="text-align:left">
+<select name="choosedType">
+<option value="songs">Song</option><br>
+<option value="artists" selected>Artists</option></br>
+<option value="albums">Albums</option></br>
+</select></td></tr>
+
+
+<input type="text" style="display:none">
+
+<tr><td colspan=3 style="text-align:right;"><input type="button" value="Search" onclick="check()"></td></tr>
+</form>
+
+</table>
+<div>
+</div>
+</body>
+
+</html>
